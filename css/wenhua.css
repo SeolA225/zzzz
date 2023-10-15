@@ -1,0 +1,65 @@
+body{
+    background-color: #f3f3f3;
+}
+.fu::after,.fu::before{
+    content: "";
+    display: block;
+    clear: both;
+}
+.history{
+    width: 1150px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.history li{
+    margin-bottom: 80px;
+    height: 400px;
+    list-style: none;
+}
+
+.content{
+    position: relative;
+    float: left;
+    width: 450px;
+    height: 400px;
+    background-color: #E8F3FF;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.content:hover{
+    background-color: #FFCF8B;
+}
+.content h2{
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    font-size: 24px;
+    transform: translateX(-50%);
+    height: 60px;
+    line-height: 60px;
+    padding: 0 30px;
+    border-radius: 30px;
+    border: 3px dotted #fff;
+    background-color: #165DFF;
+    color: #fff;
+}
+.history p{
+    margin-top: 25px;
+    line-height: 1.4;
+    font-size: 15px;
+}
+.fm{
+    float: right;
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+.history .fm img{
+    width: 700px;
+    height: 400px;
+}
+.history .fm:hover img{
+    width: 756px;
+    height: 432px;
+    transition: all .6s;
+}

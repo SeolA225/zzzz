@@ -1,0 +1,304 @@
+/* 通配符选择器表示选择所有元素,这里主要是为了清除所有元素默认外边距和内边距 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 这里给a标签去除下滑线，那么往后的所有超链接都不需要再手动清除这个下滑线 */
+a{
+    text-decoration: none;
+}
+/* 这个无序列表标签和上面是一样的功能，往后就不需要再重复去除列表前面那个小点了 */
+ul{
+    list-style: none;
+}
+.nav{
+    width: 100%;
+    /* 下面这个样式是做渐变色的背景颜色 */
+    background-image: linear-gradient(to top, #57A9FB, #165DFF);
+}
+.nav-1{
+    /* 1150是作为网站内容的容器宽度来使用，并且通过外边距的方式让这个容器居中显示 */
+    width: 1150px;
+    height: 60px;
+    margin: 0 auto;
+}
+.nav-1 img{
+    width: 58px;
+    float: left;
+    border-radius: 29px;
+}
+.xian{
+    border-bottom: 2px solid #fff;
+}
+.nav-1 ul{
+    float: right;
+}
+.nav-1 li{
+    list-style: none;
+    float: left;
+}
+.nav-1 a{
+    display: inline-block;
+    padding: 0 20px;
+    height: 60px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    line-height: 60px;
+    color: #fff;
+}
+.nav-1 a:hover{
+    font-weight: 600;
+}
+/* 这个模块是连着导航的所以不用设置背景颜色 */
+.introduce{
+    width: 1150px;
+    margin: 0 auto;
+    height: 460px;
+}
+.introduce img{
+    width: 380px;
+    float: left;
+    margin: 20px;
+    margin-top: 40px;
+    margin-right: 60px;
+    /* 设置圆角的时候设置为图片宽度的一半就是一个圆形图片 */
+    border-radius: 190px;
+    /* 以下是元素外部阴影，能让元素看起来更加立体 */
+    box-shadow: 0 0 8px 2px #BEDAFF;
+}
+.introduce h1{
+    font-size: 56px;
+    text-align: center;
+    font-family: "宋体";
+    font-weight: 1000;
+    color: #fff;
+    padding-top: 25px;
+}
+.introduce p{
+    /* 王本首航缩进，2em表示两个字的宽度 */
+    text-indent: 2em;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #f2f3f5;
+}
+/* 以下选择器是新闻通知内容模块的容器元素 */
+.news_cont{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.news_cont .left{
+    float: left;
+    width: 820px;
+}
+.hd{
+    /* 这里没有给宽度是为了让这个选择器符合更多模块的使用 */
+    height: 60px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #262426;
+}
+.hd h1{
+    /* 当标题标签浮动之后那么它的宽度就是由内容决定，此时不需要再设置宽度、 */
+    float: left;
+    line-height: 58px;
+    height: 58px;
+    font-size: 26px;
+    /* 这里设置了一个五像素的下边框主要是为了和复合子那个下边框重合 */
+    border-bottom: 5px solid #165DFF;
+}
+.hd h1 span{
+    font-size: 18px;
+    font-weight: 400;
+    color: #999;
+}
+.hd a{
+    float: right;
+    line-height: 60px;
+    color: #444;
+}
+.news_video{
+    float: left;
+    width: 350px;
+    border: 1px solid #e5e6eb;
+}
+.news_video video{
+    width: 350px;
+}
+.news_video h3{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.news_video div{
+    height: 30px;
+    line-height: 36px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #444;
+}
+.news_video span{
+    margin-right: 20px;
+}
+/* 新闻列表容器 */
+.news_list{
+    float: right;
+    width: 446px;
+}
+.news_list li{
+    height: 54px;
+    border-bottom: 1px solid #e5e6eb;
+}
+.news_list li a{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    color: #000;
+}
+/* 当鼠标经过新闻列表中新闻标题时的样式 */
+.news_list li a:hover{
+    color: #165DFF;
+    font-weight: 600;
+}
+.news_list li p{
+    line-height: 18px;
+    font-size: 12px;
+    color: #999;
+}
+/* 清除浮动，往后再有其他模块里面的内容需要清除浮动的，直接往该元素里面添加一个“fu”属性值即可 */
+.fu::after,.fu::before{
+    content: "";
+    display: block;
+    clear: both;
+}
+.news_cont .right{
+    float: right;
+    width: 360px;
+}
+.notify li{
+    height: 54px;
+    border-bottom: 1px solid #e5e6eb;
+}
+.notify li a{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    font-weight: 600;
+    color: #000;
+}
+.notify li a:hover{
+    color: #ef4238;
+}
+.notify li p{
+    line-height: 18px;
+    font-size: 12px;
+    color: #999;
+}
+/* 景区模块容器 */
+.tour{
+
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.tour ul{
+    width: 1200px;
+    margin-top: 20px;
+    /* 这里是弹性盒子布局，像我这里只简单的使用了两个样式就让这个列表完美的对齐、、 */
+    display: flex;
+    /* 电这个属性表示里面的子元素先两边贴边显示对齐然后平分剩余的空间 */
+    justify-content: space-between;
+}
+.tour li{
+    width: 280px;
+    height: 370px;
+    position: relative;
+    overflow: hidden;
+}
+.tour img{
+    width: 280px;
+}
+.jd_name{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    padding: 4px 8px;
+    background-color: #BEDAFF;
+    font-size: 16px;
+    font-family: "宋体";
+    color: #165DFF;
+}
+.tour li:hover{
+    border-radius: 25px;
+    transition: all .4s;
+}
+/* 脚页信息容器 */
+footer{
+    margin-top: 60px;
+    /* 这里之所以用内边距生因为这里面的内容高度还不确定，那么我设置内边距它就会随着队友而称大，就不用考虑高度的问题了、 */
+    padding: 50px;
+    background-image: linear-gradient(to top left, #1d2129, #000D4D);
+}
+.foo{
+    width: 1200px;
+    margin: 0 auto;
+}
+.foo .txt{
+    float: left;
+    width: 350px;
+}
+.foo h2{
+    height: 56px;
+    line-height: 56px;
+    color: #fff;
+    border-bottom: 3px double #fff;
+}
+.foo .txt p{
+    color: #fff;
+    line-height: 2;
+}
+.account{
+    margin-top: 24px;
+    height: 30px;
+}
+.account span{
+    float: left;
+    font-size: 22px;
+    line-height: 30px;
+    color: #c9cdd4;
+}
+.account a{
+    float: left;
+    margin-left: 20px;
+}
+.account img{
+    width: 30px;
+}
+.foo ul{
+    float: right;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+.foo li{
+    width: 160px;
+}
+.foo h3{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+.foo li a{
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    font-size: 16px;
+    color: #c9cdd4;
+}
+.foo li a:hover{
+    color: #BEDAFF;
+    font-weight: 600;
+}

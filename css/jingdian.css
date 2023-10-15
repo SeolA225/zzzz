@@ -1,0 +1,94 @@
+.banner{
+    width: 1150px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#pic{
+    width: 1150px;
+    height: 500px;
+}
+.list{
+    width: 1150px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.scenicSpot{
+    height: 400px;
+    margin-bottom: 30px;
+}
+.mImg{
+    float: left;
+    width: 266px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.mImg img{
+    width: 266px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.mImg:hover img{
+    width: 287px;
+    height: 432px;
+    transition: all .6s;
+}
+.scenicSpot .content{
+    float: right;
+    width: 860px;
+    height: 400px;
+    position: relative;
+}
+.scenicSpot .content p{
+    margin-top: 9px;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #707070;
+}
+.share{
+    margin-top: 20px;
+    height: 28px;
+}
+.share span{
+    float: left;
+    font-size: 20px;
+    color: #008026;
+    vertical-align: middle;
+}
+.share a{
+    float: left;
+    margin-left: 8px;
+}
+.share img{
+    width: 28px;
+}
+.scenicSpot ul{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-top: 25px;
+    width: 860px;
+    display: flex;
+    justify-content: space-between;
+}
+.scenicSpot li{
+    width: 200px;
+    height: 133px;
+    overflow: hidden;
+    position: relative;
+}
+.scenicSpot li img{
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.scenicSpot li:hover img{
+    width: 220px;
+    transition: all .7s;
+}
